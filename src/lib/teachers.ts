@@ -1,5 +1,5 @@
 export interface TeacherConfig {
-  slug: string;
+  slug: "manas" | "ayushi" | "jhilmil" | "kriti";
   /** Big heading, e.g. "MANAS.exe" for the terminal theme */
   heading: string;
   /** Plain name used in card labels / alt text */
