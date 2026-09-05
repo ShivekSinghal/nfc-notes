@@ -157,8 +157,8 @@
   --border: oklch(0.32 0.03 160 / 45%);
   --input: oklch(0.32 0.03 160 / 45%);
   --ring: oklch(0.82 0.14 155);
-  --font-display: "JetBrains Mono", ui-monospace, monospace;
-  --font-body: "JetBrains Mono", ui-monospace, monospace;
+  --display-font: "JetBrains Mono", ui-monospace, monospace;
+  --body-font: "JetBrains Mono", ui-monospace, monospace;
 }
 
 .theme-ayushi {
@@ -177,8 +177,8 @@
   --border: oklch(0.87 0.02 75);
   --input: oklch(0.87 0.02 75);
   --ring: oklch(0.55 0.07 45);
-  --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  --display-font: "Cormorant Garamond", Georgia, serif;
+  --body-font: "Inter", system-ui, sans-serif;
 }
 
 .theme-jhilmil {
@@ -197,8 +197,8 @@
   --border: oklch(0.45 0.08 330 / 40%);
   --input: oklch(0.45 0.08 330 / 40%);
   --ring: oklch(0.78 0.14 65);
-  --font-display: "Fraunces", Georgia, serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  --display-font: "Fraunces", Georgia, serif;
+  --body-font: "Inter", system-ui, sans-serif;
 }
 
 .theme-kriti {
@@ -217,8 +217,8 @@
   --border: oklch(0.9 0.03 75);
   --input: oklch(0.9 0.03 75);
   --ring: oklch(0.68 0.15 45);
-  --font-display: "Sora", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  --display-font: "Sora", system-ui, sans-serif;
+  --body-font: "Inter", system-ui, sans-serif;
 }
 
 @layer base {
