@@ -10,33 +10,73 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AyushiRouteImport } from './routes/ayushi'
+import { Route as JhilmilRouteImport } from './routes/jhilmil'
+import { Route as KritiRouteImport } from './routes/kriti'
+import { Route as ManasRouteImport } from './routes/manas'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AyushiRoute = AyushiRouteImport.update({
+  id: '/ayushi',
+  path: '/ayushi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JhilmilRoute = JhilmilRouteImport.update({
+  id: '/jhilmil',
+  path: '/jhilmil',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KritiRoute = KritiRouteImport.update({
+  id: '/kriti',
+  path: '/kriti',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ManasRoute = ManasRouteImport.update({
+  id: '/manas',
+  path: '/manas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ayushi': typeof AyushiRoute
+  '/jhilmil': typeof JhilmilRoute
+  '/kriti': typeof KritiRoute
+  '/manas': typeof ManasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ayushi': typeof AyushiRoute
+  '/jhilmil': typeof JhilmilRoute
+  '/kriti': typeof KritiRoute
+  '/manas': typeof ManasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ayushi': typeof AyushiRoute
+  '/jhilmil': typeof JhilmilRoute
+  '/kriti': typeof KritiRoute
+  '/manas': typeof ManasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/ayushi' | '/jhilmil' | '/kriti' | '/manas'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/ayushi' | '/jhilmil' | '/kriti' | '/manas'
+  id: '__root__' | '/' | '/ayushi' | '/jhilmil' | '/kriti' | '/manas'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AyushiRoute: typeof AyushiRoute
+  JhilmilRoute: typeof JhilmilRoute
+  KritiRoute: typeof KritiRoute
+  ManasRoute: typeof ManasRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +88,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ayushi': {
+      id: '/ayushi'
+      path: '/ayushi'
+      fullPath: '/ayushi'
+      preLoaderRoute: typeof AyushiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jhilmil': {
+      id: '/jhilmil'
+      path: '/jhilmil'
+      fullPath: '/jhilmil'
+      preLoaderRoute: typeof JhilmilRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kriti': {
+      id: '/kriti'
+      path: '/kriti'
+      fullPath: '/kriti'
+      preLoaderRoute: typeof KritiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manas': {
+      id: '/manas'
+      path: '/manas'
+      fullPath: '/manas'
+      preLoaderRoute: typeof ManasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AyushiRoute: AyushiRoute,
+  JhilmilRoute: JhilmilRoute,
+  KritiRoute: KritiRoute,
+  ManasRoute: ManasRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
